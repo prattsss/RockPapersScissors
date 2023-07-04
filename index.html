@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rps.css">
+  <script src="rps.js"></script>
+  <title>Rock-Paper-Scissors</title>
+</head>
+
+<body>
+<!-- Rock Paper Scissors -->
+<main>
+  <header class="header"> 
+    <!-- SCORE -->
+      <div class="score-text">
+        <h1> SCORE </h1> 
+       
+      </div>
+      <div class="score-header">
+        <p class="js-score" ></p>
+      </div>  
+  </header>
+ <!-- Playing Area -->
+  <section class="fight-zone">
+    <div class="p-clash">
+      <p class="js-pmoves"></p>
+      
+    </div>
+    <div class="p-clash">
+      <p class="js-cmoves"></p>
+    </div>  
+  </section>
+  <!-- Showcasing Result -->
+  <section class="results-under-clash">
+    <div>
+      <p class="js-result">Let's Play! Rock Papers...</p>
+    </div>
+  </section>
+  
+<!-- Move Selectors -->
+  <section class="button-section">
+ 
+    <button class="images-button"  onclick="
+    playGame('Rock');
+    ">
+    <img class="image" src="img/rock.png" alt="">
+    </button>
+    <button class="images-button"  onclick="
+    playGame('Paper');">
+    <img class="image" src="img/paper.png" alt="">
+    </button>
+    <button class="images-button"  onclick="
+    playGame('Scissors');">
+    <img class="image" src="img/scissors.png" alt="">
+    </button>
+  </section>
+  <!-- Reset Score Button -->
+  <div class="reset-button-container">
+      <button class="reset-button" onclick=" 
+      score.Win = 0;
+      score.Lose = 0;
+      score.Tie = 0;
+      localStorage.removeItem('score')
+      updateScore();
+      document.querySelector('.js-moves').innerHTML = '';
+      document.querySelector('.js-result').innerHTML = '';
+      ">
+      Reset Score
+    </button>
+  </div>
+
+</main>
+</body>
+
+</html>
