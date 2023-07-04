@@ -83,8 +83,8 @@ score.Tie += 1;
 }
 
 updateScore();
-document.querySelector('.js-pmoves').innerHTML = `<img class="clash-result-images" src="img/${playerMove}.png" alt="">`
-document.querySelector('.js-cmoves').innerHTML = `<img class="clash-result-images" src="img/${computerMove}.png" alt="">`
+document.querySelector('.js-pmoves').innerHTML = `<img class="clash-result-images" src="img/${playerMove.toLowerCase();}.png" alt="">`
+document.querySelector('.js-cmoves').innerHTML = `<img class="clash-result-images" src="img/${computerMove.toLowerCase();}.png" alt="">`
 document.querySelector('.js-result').innerHTML = result; 
 
 // putting the result into localstorge
